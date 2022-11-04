@@ -51,14 +51,17 @@ Pizza.prototype.pizzaOrderInfo = function () {
 let newOrder = new Orders();
 
 function listOrders(orderToDisplay) {
-  let orderInfo = document.querySelector("div#order-info");
+  let orderInfo = document.querySelector("div#order-list");
   orderInfo.innerText = null;
   const ul = document.createElement("ul");
   Object.keys(orderToDisplay.pizzas).forEach(function (key) {
     const pizza = orderToDisplay.findPizza(key);
     const li = document.createElement("li");
-
+    li.append(pizza.pizzaOrderInfo());
+    li.setAttribute("id", pizza.id);
+    ul.append(li);
   });
+  orderInfo.append(ul);
 }
 
 function handleSubmit(event) {
@@ -73,10 +76,17 @@ function handleSubmit(event) {
   const newPizza = new Pizza(pSize, pSauce, pCheese, pMeat, pVeggie);
   const newPrice = newPizza.price();
   const pizzaInfo = newPizza.size + " " + newPizza.sauce + " " + newPizza.cheese + " " + newPizza.meat + " " + newPizza.veggie;
-  document.querySelector("h3#cost").innerHTML = newPrice + " " + pizzaInfo;
+  document.querySelector("h3#cost").innerHTML = newPrice;
   document.querySelector("h3#cost").classList.remove("invisible");
 
   newOrder.addPizza(newPizza);
+  listOrders(newOrder);
+
+  document.querySelector("select#size").value = null;
+  document.querySelector("select#sauce").value = null;
+  document.querySelector("select#cheese").value = null;
+  document.querySelector("select#meat").value = null;
+  document.querySelector("select#veggie").value = null;
 }
 
 const reset = function () {
