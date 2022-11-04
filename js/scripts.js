@@ -14,6 +14,12 @@ Orders.prototype.assignId = function() {
   return this.currentId;
 }
 
+Orders.prototype.findPizza = function (id) {
+  if (this.pizzas[id] !== undefined) {
+    return this.pizzas[id];
+  }
+  return false;
+};
 // Business Logic for Pizza
 function Pizza(size, sauce, cheese, meat, veggie) {
   this.size = size;
@@ -39,6 +45,15 @@ Pizza.prototype.price = function () {
 
 // UI Logic
 let newOrder = new Orders();
+
+function listOrders(orderToDisplay) {
+  let orderInfo = document.querySelector("div#order-info");
+  orderInfo.innerText = null;
+  const ul = document.createElement("ul");
+  Object.keys(orderToDisplay.pizzas).forEach(function (key) {
+
+  })
+}
 
 function handleSubmit(event) {
   event.preventDefault();

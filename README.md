@@ -35,4 +35,16 @@ Code: Orders.prototype.assignId = function() {
   return this.currentId;
 }
 Expected Output: newOrder{1:myPizza}
+
+Describe: findPizza(id)
+
+Test: "It should find a pizza with a defined Id"
+Code: Orders.prototype.findPizza = function (id) {
+  if (this.pizzas[id] !== undefined) {
+    return this.pizzas[id];
+  }
+  return false;
+};
+Expected Output: newOrder.findPizza(1);
+                newPizza{}
 ```
