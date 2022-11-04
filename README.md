@@ -1,3 +1,30 @@
+# Stay Cheesey Pizza Parlor
+
+#### Contributors  _**Chris Loveless**_
+
+#### A website to order a pizza online
+
+## Technologies Used
+
+* _HTML_
+* _JavaScript_
+* _CSS_
+* _Bootstrap_
+
+## Description
+
+This site will take customer input to order a pizza online. It will then display their order and add additional orders with price for most recent pizza added. 
+
+## Setup/Installation Requirements
+
+1. Access project through github repository (github.com/ChrisKLoveless)
+2. Clone repository 
+3. Open index.html file in browser
+
+## Known Bugs
+* Clicking on list items does not display the items details as intended.
+
+## Testing:
 ```
 Describe: Pizza()
 
@@ -57,3 +84,6 @@ Code: Pizza.prototype.pizzaOrderInfo = function () {
 Expected Output: newPizza.pizzaOrderInfo();
 "Large Red Sauce Pepperoni Jalapeno"
 ```
+## License
+Copyright (c) 2022 Chris Loveless, Ryan Krueger, Anahi Ruiz Robles
+_[MIT](https://choosealicense.com/licenses/mit/)_
