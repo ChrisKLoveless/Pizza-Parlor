@@ -12,3 +12,16 @@ Pizza.prototype.price = function() {
     return "Your price is $12.99";
   }
 }
+
+
+
+
+// UI Logic
+function handleSubmit(event) {
+  event.preventDefault();
+
+}
+
+window.addEventListener("load", function () {
+  this.document.getElementById("form").addEventListener("submit", handleSubmit);
+})
