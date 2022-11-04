@@ -6,3 +6,9 @@ function Pizza(size, sauce, cheese, meat, veggie) {
   this.meat = meat;
   this.veggie = veggie;
 }
+
+Pizza.prototype.price = function() {
+  if(this.size === "large") {
+    return "Your price is $12.99";
+  }
+}
