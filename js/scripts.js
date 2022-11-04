@@ -7,12 +7,12 @@ function Orders() {
 Orders.prototype.addPizza = function(pizza) {
   pizza.id = this.assignId();
   this.pizzas[pizza.id] = pizza;
-}
+};
 
 Orders.prototype.assignId = function() {
   this.currentId += 1;
   return this.currentId;
-}
+};
 
 Orders.prototype.findPizza = function (id) {
   if (this.pizzas[id] !== undefined) {
@@ -43,6 +43,10 @@ Pizza.prototype.price = function () {
   }
 };
 
+Pizza.prototype.pizzaOrderInfo = function () {
+  return this.size + " " + this.sauce + " " + this.cheese + " " + this.meat + " " + this.veggie;
+}
+
 // UI Logic
 let newOrder = new Orders();
 
@@ -51,8 +55,10 @@ function listOrders(orderToDisplay) {
   orderInfo.innerText = null;
   const ul = document.createElement("ul");
   Object.keys(orderToDisplay.pizzas).forEach(function (key) {
+    const pizza = orderToDisplay.findPizza(key);
+    const li = document.createElement("li");
 
-  })
+  });
 }
 
 function handleSubmit(event) {

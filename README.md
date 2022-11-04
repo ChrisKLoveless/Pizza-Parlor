@@ -47,4 +47,13 @@ Code: Orders.prototype.findPizza = function (id) {
 };
 Expected Output: newOrder.findPizza(1);
                 newPizza{}
+
+Describe: pizzaOrderInfo();
+
+Test: "It should display the properties of the pizza object in a string"
+Code: Pizza.prototype.pizzaOrderInfo = function () {
+  return this.size + " " + this.sauce + " " + this.cheese + " " + this.meat + " " + this.veggie;
+}
+Expected Output: newPizza.pizzaOrderInfo();
+"Large Red Sauce Pepperoni Jalapeno"
 ```
