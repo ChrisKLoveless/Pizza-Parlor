@@ -8,12 +8,16 @@ function Pizza(size, sauce, cheese, meat, veggie) {
 }
 
 Pizza.prototype.price = function () {
-  if (this.size === "large") {
-    return "That will cost you:  $14.99";
-  } else if(this.size === "medium") {
-    return "That will cost you:  $12.99";
+  if (this.size === "mini") {
+    return "That will cost you:  $7.50";
   } else if(this.size === "small") {
-    return "That will cost you:  $9.99";
+    return "That will cost you:  $13.95";
+  } else if(this.size === "medium") {
+    return "That will cost you:  $18.95";
+  } else if(this.size === "large") {
+    return "That will cost you:  $22.95";
+  } else if(this.size === "giant") {
+    return "That will cost you:  $25.95";
   }
 };
 

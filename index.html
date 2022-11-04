@@ -15,46 +15,88 @@
 <body>
   <div class="container">
     <div class="jumbotron text-center">
-      <img src="img/pizza-logo2.png" class="logo" alt="Image of pizza logo"> 
+      <img src="img/pizza-logo2.png" class="logo" alt="Image of pizza logo">
       <h1>Stay Cheesey Pizza Parlor</h1>
     </div>
 
-    <form id="form">
-      <select id="size" class="form-select form-select-lg mb-3" aria-label=".form-select-lg">
-        <option selected>Pick a size:</option>
-        <option value="small">Small</option>
-        <option value="medium">Medium</option>
-        <option value="large">Large</option>
-      </select>
-      <select id="sauce" class="form-select form-select-lg mb-3" aria-label=".form-select-lg">
-        <option selected>Pick a sauce:</option>
-        <option value="red">Red</option>
-        <option value="white">White</option>
-      </select>
-      <select id="cheese" class="form-select form-select-lg mb-3" aria-label=".form-select-lg">
-        <option selected>Pick a cheese:</option>
-        <option value="mozz">Mozzerrela</option>
-        <option value="prov">Provolone</option>
-        <option value="gorg">Gorgonzola</option>
-      </select>
-      <select id="meat" class="form-select form-select-lg mb-3" aria-label=".form-select-lg">
-        <option selected>Pick a meat:</option>
-        <option value="pepp">Pepperoni</option>
-        <option value="bac">Bacon</option>
-        <option value="saus">Sausage</option>
-      </select>
-      <select id="veggie" class="form-select form-select-lg mb-3" aria-label=".form-select-lg">
-        <option selected>Pick a veggie:</option>
-        <option value="onion">Onion</option>
-        <option value="jala">Jalapeno</option>
-        <option value="arti">Artichoke</option>
-        <option value="mush">Mushrooms</option>
-      </select>
-      <div class="d-grid gap-2 d-md-flex justify-content-md-end">
-        <button class="btn btn-success me-md-2" type="submit">Submit</button>
-        <button class="btn btn-warning ml-4" type="reset" id="reset-btn">Reset</button>
-      </div>
-    </form>
+    <div class="menu">
+      <h2>Build Your Pizza:</h2>
+      <form id="form" class="form-group">
+
+        <div class="col-md-4">
+          <div class="card" style="width: 40rem;">
+            <img src="img/pizza-sizes.png" class="sizes" alt="Pizza size chart">
+            <div class="card-body">
+              <select id="size" class="form-select form-select-lg mb-3" aria-label=".form-select-lg">
+                <option selected>Pick a size:</option>
+                <option value="mini">Mini</option>
+                <option value="small">Small</option>
+                <option value="medium">Medium</option>
+                <option value="large">Large</option>
+                <option value="giant">Giant</option>
+              </select>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="card" style="width: 40rem;">
+            <div class="card-body">
+              <select id="sauce" class="form-select form-select-lg mb-3" aria-label=".form-select-lg">
+                <option selected>Pick a sauce:</option>
+                <option value="red">Red</option>
+                <option value="white">White</option>
+              </select>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="card" style="width: 40rem;">
+            <div class="card-body">
+              <select id="cheese" class="form-select form-select-lg mb-3" aria-label=".form-select-lg">
+                <option selected>Pick a cheese:</option>
+                <option value="mozz">Mozzerrela</option>
+                <option value="prov">Provolone</option>
+                <option value="gorg">Gorgonzola</option>
+              </select>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="card" style="width: 40rem;">
+            <div class="card-body">
+              <select id="meat" class="form-select form-select-lg mb-3" aria-label=".form-select-lg">
+                <option selected>Pick a meat:</option>
+                <option value="pepp">Pepperoni</option>
+                <option value="bac">Bacon</option>
+                <option value="saus">Sausage</option>
+              </select>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="card" style="width: 40rem;">
+            <div class="card-body">
+              <select id="veggie" class="form-select form-select-lg mb-3" aria-label=".form-select-lg">
+                <option selected>Pick a veggie:</option>
+                <option value="onion">Onion</option>
+                <option value="jala">Jalapeno</option>
+                <option value="arti">Artichoke</option>
+                <option value="mush">Mushrooms</option>
+              </select>
+            </div>
+          </div>
+        </div>
+
+        <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+          <button class="btn btn-success me-md-2" type="submit">Submit</button>
+          <button class="btn btn-warning ml-4" type="reset" id="reset-btn">Reset</button>
+        </div>
+      </form>
+    </div>
 
     <div id="cost" class="invisible"></div>
 
