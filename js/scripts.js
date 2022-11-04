@@ -1,10 +1,17 @@
 // Business Logic for Order
 function Orders() {
   this.pizzas = {};
+  this.currentId = 0;
 }
 
 Orders.prototype.addPizza = function(pizza) {
-  this.pizzas[pizza.size] = pizza;
+  pizza.id = this.assignId();
+  this.pizzas[pizza.id] = pizza;
+}
+
+Orders.prototype.assignId = function() {
+  this.currentId += 1;
+  return this.currentId;
 }
 
 // Business Logic for Pizza
@@ -31,6 +38,8 @@ Pizza.prototype.price = function () {
 };
 
 // UI Logic
+let newOrder = new Orders();
+
 function handleSubmit(event) {
   event.preventDefault();
 
@@ -45,6 +54,8 @@ function handleSubmit(event) {
   const pizzaInfo = newPizza.size + " " + newPizza.sauce + " " + newPizza.cheese + " " + newPizza.meat + " " + newPizza.veggie;
   document.querySelector("h3#cost").innerHTML = newPrice + " " + pizzaInfo;
   document.querySelector("h3#cost").classList.remove("invisible");
+
+  newOrder.addPizza(newPizza);
 }
 
 const reset = function () {

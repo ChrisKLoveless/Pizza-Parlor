@@ -26,4 +26,13 @@ Describe: Orders.prototype.addPizza()
 Test: "It should take a pizza object as an argument and add to Orders object"
 Code: newOrder.addPizza(newPizza);
 Expected Output: Orders{newPizza};
+
+Describe: Orders.prototype.assignId()
+
+Test: "It should assign a unique ID number for each pizza object added"
+Code: Orders.prototype.assignId = function() {
+  this.currentId += 1;
+  return this.currentId;
+}
+Expected Output: newOrder{1:myPizza}
 ```
