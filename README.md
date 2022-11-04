@@ -12,7 +12,18 @@ Code: const myPizza = new Pizza("large", "red", "mozzerella", "pepperoni", "jala
       myPizza.price();
 Expected Output:$12.99
 
-Test:
-Code:
-Expected Output:
+Describe: Orders()
+
+Test: "It should create an order object with a pizza object inside"
+Code: function Orders() {
+  this.pizza = {};
+}
+Expected Output: newOrder;
+                Orders{Pizza1,Pizza2}
+
+Describe: Orders.prototype.addPizza()
+
+Test: "It should take a pizza object as an argument and add to Orders object"
+Code: newOrder.addPizza(newPizza);
+Expected Output: Orders{newPizza};
 ```

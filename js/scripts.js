@@ -1,3 +1,12 @@
+// Business Logic for Order
+function Orders() {
+  this.pizzas = {};
+}
+
+Orders.prototype.addPizza = function(pizza) {
+  this.pizzas[pizza.size] = pizza;
+}
+
 // Business Logic for Pizza
 function Pizza(size, sauce, cheese, meat, veggie) {
   this.size = size;
@@ -26,14 +35,15 @@ function handleSubmit(event) {
   event.preventDefault();
 
   const pSize = document.getElementById("size").value;
-  const pSauce = document.getElementById("size").value;
-  const pCheese = document.getElementById("size").value;
-  const pMeat = document.getElementById("size").value;
-  const pVeggie = document.getElementById("size").value;
+  const pSauce = document.getElementById("sauce").value;
+  const pCheese = document.getElementById("cheese").value;
+  const pMeat = document.getElementById("meat").value;
+  const pVeggie = document.getElementById("veggie").value;
 
   const newPizza = new Pizza(pSize, pSauce, pCheese, pMeat, pVeggie);
   const newPrice = newPizza.price();
-  document.querySelector("h3#cost").innerHTML = newPrice;
+  const pizzaInfo = newPizza.size + " " + newPizza.sauce + " " + newPizza.cheese + " " + newPizza.meat + " " + newPizza.veggie;
+  document.querySelector("h3#cost").innerHTML = newPrice + " " + pizzaInfo;
   document.querySelector("h3#cost").classList.remove("invisible");
 }
 
