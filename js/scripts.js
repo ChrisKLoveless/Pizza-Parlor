@@ -31,15 +31,15 @@ function Pizza(size, sauce, cheese, meat, veggie) {
 
 Pizza.prototype.price = function () {
   if (this.size === "mini") {
-    return "That will cost you:  $7.50";
+    return "That pizza will cost you:  $7.50";
   } else if(this.size === "small") {
-    return "That will cost you:  $13.95";
+    return "That pizza will cost you:  $13.95";
   } else if(this.size === "medium") {
-    return "That will cost you:  $18.95";
+    return "That pizza will cost you:  $18.95";
   } else if(this.size === "large") {
-    return "That will cost you:  $22.95";
+    return "That pizza will cost you:  $22.95";
   } else if(this.size === "giant") {
-    return "That will cost you:  $25.95";
+    return "That pizza will cost you:  $25.95";
   } else {
     return "Please make a selection for all fields"
   }
@@ -68,11 +68,12 @@ function listOrders(orderToDisplay) {
 
 function displayOrderDetails(event) {
   const pizza = newOrder.findPizza(event.target.id);
-  document.querySelector(".pizza-size").innerText = pizza.size;
-  document.querySelector(".pizza-sauce").innerText = pizza.sauce;
-  document.querySelector(".pizza-cheese").innerText = pizza.cheese;
-  document.querySelector(".pizza-meat").innerText = pizza.meat;
-  document.querySelector(".pizza-veggie").innerText = pizza.veggie;
+  console.log(event.target)
+  document.getElementById("pizza-size").innerText = pizza.size;
+  document.getElementById("pizza-sauce").innerText = pizza.sauce;
+  document.getElementById("pizza-cheese").innerText = pizza.cheese;
+  document.getElementById("pizza-meat").innerText = pizza.meat;
+  document.getElementById("pizza-veggie").innerText = pizza.veggie;
   document.querySelector("div#order-details").removeAttribute("class");
 }
 
