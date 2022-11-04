@@ -40,6 +40,8 @@ Pizza.prototype.price = function () {
     return "That will cost you:  $22.95";
   } else if(this.size === "giant") {
     return "That will cost you:  $25.95";
+  } else {
+    return "Please make a selection for all fields"
   }
 };
 
@@ -64,6 +66,17 @@ function listOrders(orderToDisplay) {
   orderInfo.append(ul);
 }
 
+function displayOrderDetails(event) {
+  const pizza = newOrder.findPizza(event.target.id);
+  document.querySelector(".pizza-size").innerText = pizza.size;
+  document.querySelector(".pizza-sauce").innerText = pizza.sauce;
+  document.querySelector(".pizza-cheese").innerText = pizza.cheese;
+  document.querySelector(".pizza-meat").innerText = pizza.meat;
+  document.querySelector(".pizza-veggie").innerText = pizza.veggie;
+  document.querySelector("div#order-details").removeAttribute("class");
+}
+
+
 function handleSubmit(event) {
   event.preventDefault();
 
@@ -75,7 +88,6 @@ function handleSubmit(event) {
 
   const newPizza = new Pizza(pSize, pSauce, pCheese, pMeat, pVeggie);
   const newPrice = newPizza.price();
-  const pizzaInfo = newPizza.size + " " + newPizza.sauce + " " + newPizza.cheese + " " + newPizza.meat + " " + newPizza.veggie;
   document.querySelector("h3#cost").innerHTML = newPrice;
   document.querySelector("h3#cost").classList.remove("invisible");
 
@@ -95,5 +107,6 @@ const reset = function () {
 
 window.addEventListener("load", function () {
   document.getElementById("form").addEventListener("submit", handleSubmit);
+  document.querySelector("div#order-list").addEventListener("click", displayOrderDetails)
   document.getElementById("reset-btn").addEventListener("click", reset);
 });

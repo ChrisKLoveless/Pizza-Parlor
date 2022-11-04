@@ -24,8 +24,8 @@
       <form id="form" class="form-group">
         <div class="row">
           <div class="col-sm-7">
-            <div class="card" style="width: 40rem;">
-              <img src="img/pizza-sizes.png" class="sizes" alt="Image of a pizza size chart">
+            <div class="card text-center border-dark mb-2" style="width: 40rem;">
+              <img src="img/pizza-sizes.png" class="sizes img-fluid" alt="Image of a pizza size chart">
               <div class="card-body">
                 <select id="size" class="form-select form-select-lg mb-3" aria-label=".form-select-lg">
                   <option selected>Pick a size:</option>
@@ -40,8 +40,8 @@
           </div>
 
           <div class="col-sm-6">
-            <div class="card" style="width: 40rem;">
-              <img src="img/pizza-crust.png" class="crust" alt="Image of a pizza crust">
+            <div class="card border-dark mb-2" style="width: 40rem;">
+              <img src="img/pizza-crust.png" class="crust img-fluid" alt="Image of a pizza crust">
               <div class="card-body">
                 <select id="sauce" class="form-select form-select-lg mb-3" aria-label=".form-select-lg">
                   <option selected>Pick a sauce:</option>
@@ -53,8 +53,8 @@
           </div>
 
           <div class="col-sm-6">
-            <div class="card" style="width: 40rem;">
-              <img src="img/pizza-cheese.png" class="cheese" alt="Image of cheeses for pizza">
+            <div class="card text-center border-dark mb-2" style="width: 40rem;">
+              <img src="img/pizza-cheese.png" class="cheese img-fluid" alt="Image of cheeses for pizza">
               <div class="card-body">
                 <select id="cheese" class="form-select form-select-lg mb-3" aria-label=".form-select-lg">
                   <option selected>Pick a cheese:</option>
@@ -67,8 +67,8 @@
           </div>
 
           <div class="col-sm-6">
-            <div class="card" style="width: 40rem;">
-              <img src="img/pizza-meat.png" class="meat" alt="Image of meats for pizza">
+            <div class="card border-dark mb-2" style="width: 40rem;">
+              <img src="img/pizza-meat.png" class="meat img-fluid" alt="Image of meats for pizza">
               <div class="card-body">
                 <select id="meat" class="form-select form-select-lg mb-3" aria-label=".form-select-lg">
                   <option selected>Pick a meat:</option>
@@ -81,8 +81,8 @@
           </div>
 
           <div class="col-sm-6">
-            <div class="card" style="width: 40rem;">
-              <img src="img/pizza-veggie.png" class="veggie" alt="Image of veggies for pizza">
+            <div class="card text-center border-dark mb-2" style="width: 40rem;">
+              <img src="img/pizza-veggie.png" class="veggie img-fluid" alt="Image of veggies for pizza">
               <div class="card-body">
                 <select id="veggie" class="form-select form-select-lg mb-3" aria-label=".form-select-lg">
                   <option selected>Pick a veggie:</option>
@@ -102,24 +102,31 @@
       </form>
     </div>
 
-      <h2>Orders:</h2> 
-      <div class="row" id="order-list">
-      </div>
-      <h3 id="cost" class="invisible"></h3>
-      
+    <div class="row">
+      <div class="col-md-6">
+        <div class="orders">
+          <h2>Orders:</h2>
 
-      <div class="row">
-      <div id="order-detals" class="invisible">
-        <h2>Order Details:</h2>
-        <p>Size: <span class="pizza-size"></span></p>
-        <p>Sauce: <span class="pizza-sauce"></span></p>
-        <p>Cheese: <span class="pizza-cheese"></span></p>
-        <p>Meat: <span class="pizza-meat"></span></p>
-        <p>Veggie: <span class="pizza-veggie"></span></p>
+          <div class="row" id="order-list">
+          </div>
+          <h3 id="cost" class="invisible"></h3>
+        </div>
       </div>
     </div>
 
-  </div>
+    <div class="col-md-6">
+      <div class="orders">
+        <div id="order-detals" class="invisible">
+          <h2>Order Details:</h2>
+          <p>Size: <span class="pizza-size"></span></p>
+          <p>Sauce: <span class="pizza-sauce"></span></p>
+          <p>Cheese: <span class="pizza-cheese"></span></p>
+          <p>Meat: <span class="pizza-meat"></span></p>
+          <p>Veggie: <span class="pizza-veggie"></span></p>
+        </div>
+      </div>
+    </div>
+
   </div>
 </body>
 

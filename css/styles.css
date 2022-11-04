@@ -16,6 +16,14 @@ h1 {
   font-size: 1.5cm;
 }
 
+.card {
+  background-color: whitesmoke;
+}
+
+.orders {
+  background-color: rgb(255, 174, 0);
+}
+
 .crust {
   height: 250px;
   width: 400px;
@@ -42,4 +50,8 @@ h1 {
   width: 400px;
   margin-top: 25px;
   margin-left: 25px;
+}
+
+.order-list {
+  background-color: rgb(255, 174, 0);
 }
