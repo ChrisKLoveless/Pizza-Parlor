@@ -22,10 +22,10 @@
     <div class="menu">
       <h2>Build Your Pizza:</h2>
       <form id="form" class="form-group">
-
-        <div class="col-md-4">
+        <div class="row">
+        <div class="col-md-7">
           <div class="card" style="width: 40rem;">
-            <img src="img/pizza-sizes.png" class="sizes" alt="Pizza size chart">
+            <img src="img/pizza-sizes.png" class="sizes" alt="Image of a pizza size chart">
             <div class="card-body">
               <select id="size" class="form-select form-select-lg mb-3" aria-label=".form-select-lg">
                 <option selected>Pick a size:</option>
@@ -39,8 +39,9 @@
           </div>
         </div>
 
-        <div class="col-md-4">
+        <div class="col-md-6">
           <div class="card" style="width: 40rem;">
+            <img src="img/pizza-crust.png" class="crust" alt="Image of a pizza crust">
             <div class="card-body">
               <select id="sauce" class="form-select form-select-lg mb-3" aria-label=".form-select-lg">
                 <option selected>Pick a sauce:</option>
@@ -51,8 +52,9 @@
           </div>
         </div>
 
-        <div class="col-md-4">
+        <div class="col-md-6">
           <div class="card" style="width: 40rem;">
+            <img src="img/pizza-cheese.png" class="cheese" alt="Image of cheeses for pizza">
             <div class="card-body">
               <select id="cheese" class="form-select form-select-lg mb-3" aria-label=".form-select-lg">
                 <option selected>Pick a cheese:</option>
@@ -64,8 +66,9 @@
           </div>
         </div>
 
-        <div class="col-md-4">
+        <div class="col-md-6">
           <div class="card" style="width: 40rem;">
+            <img src="img/pizza-meat.png" class="meat" alt="Image of meats for pizza">
             <div class="card-body">
               <select id="meat" class="form-select form-select-lg mb-3" aria-label=".form-select-lg">
                 <option selected>Pick a meat:</option>
@@ -77,8 +80,9 @@
           </div>
         </div>
 
-        <div class="col-md-4">
+        <div class="col-md-6">
           <div class="card" style="width: 40rem;">
+            <img src="img/pizza-veggie.png" class="veggie" alt="Image of veggies for pizza">
             <div class="card-body">
               <select id="veggie" class="form-select form-select-lg mb-3" aria-label=".form-select-lg">
                 <option selected>Pick a veggie:</option>
@@ -90,7 +94,7 @@
             </div>
           </div>
         </div>
-
+      </div>
         <div class="d-grid gap-2 d-md-flex justify-content-md-end">
           <button class="btn btn-success me-md-2" type="submit">Submit</button>
           <button class="btn btn-warning ml-4" type="reset" id="reset-btn">Reset</button>
@@ -98,8 +102,9 @@
       </form>
     </div>
 
-    <div id="cost" class="invisible"></div>
-
+    <div class="jumbotron">
+      <h3 id="cost" class="invisible"></h3>
+    </div>
   </div>
 </body>
 

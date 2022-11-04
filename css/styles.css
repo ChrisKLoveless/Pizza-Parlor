@@ -15,3 +15,31 @@ h1 {
   font-family: cursive;
   font-size: 1.5cm;
 }
+
+.crust {
+  height: 250px;
+  width: 400px;
+  margin-top: 25px;
+  margin-left: 25px;
+}
+
+.cheese {
+  height: 250px;
+  width: 400px;
+  margin-top: 25px;
+  margin-left: 25px;
+}
+
+.meat {
+  height: 250px;
+  width: 600px;
+  margin-top: 25px;
+  margin-left: 25px;
+}
+
+.veggie {
+  height: 250px;
+  width: 400px;
+  margin-top: 25px;
+  margin-left: 25px;
+}

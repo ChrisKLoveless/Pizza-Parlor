@@ -33,8 +33,8 @@ function handleSubmit(event) {
 
   const newPizza = new Pizza(pSize, pSauce, pCheese, pMeat, pVeggie);
   const newPrice = newPizza.price();
-  document.querySelector("div#cost").innerHTML = newPrice;
-  document.querySelector("div#cost").classList.remove("invisible");
+  document.querySelector("h3#cost").innerHTML = newPrice;
+  document.querySelector("h3#cost").classList.remove("invisible");
 }
 
 const reset = function () {
